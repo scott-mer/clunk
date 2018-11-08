@@ -24,7 +24,7 @@ lvlUp = 50
 isAlive = true
 isTurn = false
 
-saveMade = love.filesystem.exists('high.txt')
+saveMade = love.filesystem.getInfo('high.txt')
 
 if saveMade then
     scoreStr = love.filesystem.read('high.txt')
@@ -99,7 +99,7 @@ function love.load()
     clunk2 = love.audio.newSource("clunk2.mp3", "static")
     clunk3 = love.audio.newSource("clunk3.mp3", "static")
     levelUp = love.audio.newSource("level.mp3", "static")
-    theme = love.audio.newSource("theme.mp3")
+    theme = love.audio.newSource("theme.mp3", "static")
     theme:setLooping(true)
     theme:setVolume(.25)
     theme:play()
