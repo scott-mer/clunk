@@ -99,10 +99,9 @@ function love.load()
     clunk2 = love.audio.newSource("clunk2.mp3", "static")
     clunk3 = love.audio.newSource("clunk3.mp3", "static")
     levelUp = love.audio.newSource("level.mp3", "static")
-    theme = love.audio.newSource("theme.mp3", "static")
-    theme:setLooping(true)
+    theme = love.audio.newSource("theme.mp3", "stream")
     theme:setVolume(.25)
-    theme:play()
+    love.audio.play(theme)
 
     clank = love.graphics.newImage("clank.png")
 end
